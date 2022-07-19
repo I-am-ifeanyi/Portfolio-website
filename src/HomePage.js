@@ -1,8 +1,26 @@
 import React from "react";
 import displayPicture from "./images/dp.jpg" 
 import downloadIcon from "./images/download-svgrepo-com.svg"; 
+import Email from "./images/Email.png"; 
+import Github from "./images/Github.png";
+import LinkedIn from "./images/LinkedIn.png";
+import Twitter from "./images/Twitter.png";
+import WhatsApp from "./images/WhatsApp.png";
+import webIcon from "./images/web-icon.jpg";
+import code from "./images/Code.png";
 
 export default function HomePage() {
+const style = {
+  width: "50px",
+  height: "50px"
+}
+
+const videoStyle = {
+  width: '100%',
+  height: '300px'
+
+}
+
   return (
     <main className="main-body">
       <nav className="navBar">
@@ -36,7 +54,6 @@ export default function HomePage() {
               work space.
             </p>
             <div className="contact-me-download-resume">
-              <h4>Contact Me</h4>
               <h4>
                 Download Resume <img src={downloadIcon} alt="" />
               </h4>
@@ -53,7 +70,91 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <div className="social-handles"></div>
+      <div className="social-handles">
+        <figure>
+          <a href="mailto: theonyekagroup@gmail.com" target="_blank">
+            <img src={Email} alt="Email Logo" />
+          </a>
+          <figcaption>Email</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="https://github.com/I-am-ifeanyi?tab=repositories"
+            target="_blank"
+          >
+            <img src={Github} alt="Github Logo" />
+          </a>
+          <figcaption>Github</figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.linkedin.com/in/ifeanyi-onyeka/" target="_blank">
+            <img src={LinkedIn} alt="LinkedIn Logo" />
+          </a>
+          <figcaption>LinkedIn</figcaption>
+        </figure>
+        <figure>
+          <a href="https://twitter.com/ifeanyi_onyeka" target="_blank">
+            <img src={Twitter} alt="Twitter Logo" />
+          </a>
+          <figcaption>Twitter</figcaption>
+        </figure>
+        <figure>
+          <a
+            href="https://api.whatsapp.com/send?phone=2348063611278"
+            target="_blank"
+          >
+            <img src={WhatsApp} alt="WhatsApp Logo" />
+          </a>
+          <figcaption>whatsapp</figcaption>
+        </figure>
+      </div>
+      <section className="my-services">
+        <div className="services-option">
+          <div className="primary-service">
+            <div className="service-details">
+              <img src={webIcon} alt="" style={style} />
+              <div className="details">
+                <h1>Web Development</h1>
+                <p>
+                  I care deeply about creating world-class, useful, and
+                  beautiful products that help people and make a difference. I
+                  can be as involved in your project as you need me to be; from
+                  the seed of the idea, to sketches, creative direction, design,
+                  copywriting, system design, front-end and to a limited extent,
+                  the backend.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="primary-service">
+            <div className="service-details">
+              <img src={code} alt="" style={style} />
+              <div className="details">
+                <h1>App Development</h1>
+                <p>
+                  I have an assemble of experienced mobile app developers who
+                  has demonstrated a track record of success creating apps that
+                  are both well-received and commercially viable. Skilled with
+                  working as a team and incorporating input into projects.
+                  Ability to always look for ways to improve upon an already
+                  existing app to keep people downloading it and enjoying it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="services-option">
+          <h1>About my awesome services</h1>
+          <iframe
+            src="https://www.youtube.com/embed/xiNW9-Pwqq8"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="video"
+            style={videoStyle}
+          />
+        </div>
+      </section>
     </main>
   );
 }
