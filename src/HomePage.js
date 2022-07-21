@@ -90,7 +90,11 @@ const apiInfo = info.map((data) => {
       </section>
       <div className="social-handles">
         <figure>
-          <a href="mailto: theonyekagroup@gmail.com" target="_blank">
+          <a
+            href="mailto: theonyekagroup@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={Email} alt="Email Logo" />
           </a>
           <figcaption>Email</figcaption>
@@ -99,19 +103,28 @@ const apiInfo = info.map((data) => {
           <a
             href="https://github.com/I-am-ifeanyi?tab=repositories"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={Github} alt="Github Logo" />
           </a>
           <figcaption>Github</figcaption>
         </figure>
         <figure>
-          <a href="https://www.linkedin.com/in/ifeanyi-onyeka/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/ifeanyi-onyeka/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={LinkedIn} alt="LinkedIn Logo" />
           </a>
           <figcaption>LinkedIn</figcaption>
         </figure>
         <figure>
-          <a href="https://twitter.com/ifeanyi_onyeka" target="_blank">
+          <a
+            href="https://twitter.com/ifeanyi_onyeka"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={Twitter} alt="Twitter Logo" />
           </a>
           <figcaption>Twitter</figcaption>
@@ -120,6 +133,7 @@ const apiInfo = info.map((data) => {
           <a
             href="https://api.whatsapp.com/send?phone=2348063611278"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={WhatsApp} alt="WhatsApp Logo" />
           </a>

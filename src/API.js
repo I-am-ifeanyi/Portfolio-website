@@ -1,4 +1,3 @@
-import React from "react";
 import weatherApp from "./images/weather-app.png";
 import portfolio from "./images/portfolio-website.png";
 import uslaccAfrica from "./images/uslaccafrica-website.png";

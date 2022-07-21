@@ -6,7 +6,7 @@ export default function Projects({name, description1, description2, stack1, stac
     <section className="my-projects">
       <div className="my-project-details">
         <figure className="project-pictures">
-          <img src={image} alt="Project Pictures"/>
+          <img src={image} alt="Project Pictures" />
         </figure>
         <aside>
           <h1>{name}</h1>
@@ -19,7 +19,9 @@ export default function Projects({name, description1, description2, stack1, stac
           </div>
           <h4>
             <img src={Github} alt="Github Logo" />
-            <a href={source} target="_blank">Source Code</a>
+            <a href={source} target="_blank" rel="noreferrer">
+              Source Code
+            </a>
           </h4>
         </aside>
       </div>
