@@ -8,6 +8,8 @@ import Twitter from "./images/Twitter.png";
 import WhatsApp from "./images/WhatsApp.png";
 import webIcon from "./images/web-icon.jpg";
 import code from "./images/Code.png";
+import info from "./API"
+import Projects from "./projects";
 
 export default function HomePage() {
 const style = {
@@ -20,6 +22,22 @@ const videoStyle = {
   height: '300px'
 
 }
+
+const apiInfo = info.map((data) => {
+  return (
+    <Projects
+      key={data.id}
+      name={data.name}
+      description1={data.description1}
+      description2={data.description2}
+      stack1={data.stack1}
+      stack2={data.stack2}
+      stack3={data.stack3}
+      image={data.image}
+      source={data.source}
+    />
+  );
+})
 
   return (
     <main className="main-body">
@@ -147,14 +165,16 @@ const videoStyle = {
           <h1>About my awesome services</h1>
           <iframe
             src="https://www.youtube.com/embed/xiNW9-Pwqq8"
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay; encrypted-media"
-            allowfullscreen
             title="video"
             style={videoStyle}
           />
         </div>
       </section>
+
+      <h1 className="caseStudies">Sample Projects</h1>
+      {apiInfo}
     </main>
   );
 }

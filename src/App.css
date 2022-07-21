@@ -145,14 +145,12 @@ li:last-child:hover {
   border: 2px solid #F9FBFC;
   display: grid;
   place-items: center;
-  box-shadow: 1px 2.5px 3px gray;
 }
 
 .my-picture {
   max-width: 250px;
   max-height: 250px;
   border-radius: 50%;
-  box-shadow: 2px 2.5px 3px gray;
 }
 
 .social-handles {
@@ -162,7 +160,6 @@ li:last-child:hover {
   margin: auto;
   top: 150px;
   background:  #FFFFFF;
-  box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.03);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -171,15 +168,16 @@ li:last-child:hover {
 
 .social-handles > figure {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
-  background-color: rgb(250, 249, 249);
-  padding: 5px;
-  box-shadow: 1px 2px 3px gray;
+  padding: 15px;
 }
 
 .social-handles > figure:hover {
   transform: translateY(1.5px);
-  background-color: rgb(212, 196, 196);
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 .my-services {
@@ -231,10 +229,125 @@ li:last-child:hover {
 
 .details > h1 {
   text-align: center;
-  font-family: sans;
   text-decoration: underline;
 }
 
 .details > p{
   text-align: justify;
 }
+
+.caseStudies {
+  position: relative;
+  width: 25%;
+  margin-left: 8%;
+  padding: 5px;
+  border-radius: 10px 250px 5px 10px;
+  top: 400px;
+  font-family: sans;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 65px;
+  letter-spacing: 0.05em;
+  color: #243762;
+  background-color: whitesmoke;
+
+}
+
+.my-projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 400px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.my-project-details {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  z-index: 1;
+}
+
+.my-project-details > aside {
+  max-width: 45%;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+  box-shadow: 1px 5px 20px gray;
+  line-height: 1.1;
+  border-radius: 5px;
+  margin-left: -200px;
+  margin-bottom: -200px;
+  z-index: 100;
+}
+
+.project-pictures {
+  max-width: 80%;
+  height: 450px;
+  padding: 20px;
+  background: #EDF5FC;
+  position: relative;
+  opacity: 0.5;
+  z-index: 100;
+  border-radius: 0px 12px 0px 12px;
+  animation-name: dancebg;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: 2s all linear;
+  border: 0.3px dotted navy;
+  
+}
+
+@keyframes dancebg {
+  0% {
+    background-color:  #909fae;
+    
+  }
+  35% {
+    background-color:  rgb(179, 179, 236);
+  }
+  70% {
+    background-color:  rgb(219, 216, 198);
+  }
+  100% {
+    background-color:  rgb(238, 226, 226);
+  }
+  
+}
+
+
+.project-pictures > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 12px  0px 12px;
+  position: relative;
+  z-index: 1;
+  
+  
+}
+
+.stacks > h4 {
+  display: flex;
+  background-color:  rgb(16, 16, 66);
+  color: white;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: -10px;
+}
+
+.stacks > h4:hover {
+  background-color:  rgb(21, 21, 96);
+  cursor: pointer;
+}
+
+aside > h4 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 1.5px;
+}
+
+
