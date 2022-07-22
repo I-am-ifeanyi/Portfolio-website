@@ -10,6 +10,7 @@ import webIcon from "./images/web-icon.jpg";
 import code from "./images/Code.png";
 import info from "./API"
 import Projects from "./projects";
+import resume from "./images/ifeanyi-resume.pdf";
 
 export default function HomePage() {
 const style = {
@@ -35,24 +36,94 @@ const apiInfo = info.map((data) => {
       stack3={data.stack3}
       image={data.image}
       source={data.source}
+      demo={data.demo}
+      
     />
+    
   );
+  
 })
 
+const [lightMode, setLightMode] = React.useState(true)
+
+const toggle = () => setLightMode((prev) => !prev) 
+
+
+const toggleLight = {
+  width: "50px",
+  height: "20px",
+  borderRadius: "30px",
+  backgroundColor: "rgb(7, 7, 53)",
+  margin: "10px",
+  position: "fixed",
+  right: "0"
+}
+
+const toggleDark = {
+  width: "50px",
+  height: "20px",
+  borderRadius: "30px",
+  backgroundColor: "white",
+  margin: "10px",
+  position: "fixed",
+  right: "0",
+};
+
+const toggleLeft = {
+  width: "30px",
+  height: "19px",
+  borderRadius: "30px",
+  backgroundColor: "white",
+}
+
+const toggleRight = {
+  width: "30px",
+  height: "19px",
+  borderRadius: "30px",
+  backgroundColor: "rgb(7, 7, 53)",
+  float: "right",
+};
+
+const changeLight = {
+  backgroundColor: "#E5E5E5",
+  width: "100%",
+  height: "auto"
+  
+}
+
+const changeDark = {
+  backgroundColor: "#121212",
+  width: "100%",
+  height: "auto",
+  color: 'white',
+};
+
+
   return (
-    <main className="main-body">
-      <nav className="navBar">
+    <main className="main-body" style={lightMode ? changeLight : changeDark}>
+      <header>
+        <div onClick={toggle} style={lightMode ? toggleLight : toggleDark}>
+          <div style={lightMode ? toggleLeft : toggleRight}></div>
+        </div>
+      </header>
+      <nav className={lightMode ? "navBar" : "navBar2"}>
         <img src="cover.png" alt="TOG Official Logo" className="tog-logo" />
         <ul className="navigators">
-          <li>Home</li>
-          <li>Work</li>
-          <li>About</li>
+          <li>
+            <a href={<HomePage />}>Home</a>
+          </li>
+          <li>
+            <a href="#brief-bio">About</a>
+          </li>
+          <li>
+            <a href="#my-projects">Work</a>
+          </li>
           <li>Contact Me</li>
         </ul>
       </nav>
       <section className="introduction">
         <div className="biography-section">
-          <div className="brief-bio">
+          <div className="brief-bio" id="brief-bio">
             <h4>Hello there, I am</h4>
             <h1>IFEANYI</h1>
             <p>
@@ -71,9 +142,46 @@ const apiInfo = info.map((data) => {
               technologies and simultaneously boosting my relevance in any given
               work space.
             </p>
+            <div className="my-stack">
+              <div></div>
+              <h3>MY STACK</h3>
+              <div></div>
+            </div>
+            <div className="stack-images">
+              <img
+                src="https://www.svgrepo.com/show/303500/react-1-logo.svg"
+                alt=""
+              />
+              <img
+                src="https://w7.pngwing.com/pngs/286/519/png-transparent-microsoft-azure-sql-database-microsoft-sql-server-azure-sql-data-warehouse-logo-text-logo-microsoft-azure.png"
+                alt=""
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png"
+                alt=""
+              />
+
+              <img
+                src="https://www.kindpng.com/picc/m/464-4640184_css3-png-download-css-icon-transparent-png.png"
+                alt=""
+              />
+
+              <img
+                src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png"
+                alt=""
+              />
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png
+"
+                alt=""
+              />
+            </div>
             <div className="contact-me-download-resume">
               <h4>
-                Download Resume <img src={downloadIcon} alt="" />
+                <a href={resume} download={resume}>
+                  Download Resume <img src={downloadIcon} alt="" />
+                </a>
               </h4>
             </div>
           </div>
@@ -176,11 +284,12 @@ const apiInfo = info.map((data) => {
           </div>
         </div>
         <div className="services-option">
-          <h1>About my awesome services</h1>
+          <h1>Introduction</h1>
           <iframe
-            src="https://www.youtube.com/embed/xiNW9-Pwqq8"
+            src="https://www.youtube.com/embed/1KJfVGpNRnM"
             frameBorder="0"
-            allow="autoplay; encrypted-media"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
             title="video"
             style={videoStyle}
           />
@@ -189,6 +298,19 @@ const apiInfo = info.map((data) => {
 
       <h1 className="caseStudies">Sample Projects</h1>
       {apiInfo}
+      <footer className={lightMode ? "foot" : "footy"}>
+        <h3>
+          Find an issue with this page?{" "}
+          <a href="https://github.com/I-am-ifeanyi/Portfolio-website.git">
+            feel free to fix it on Github
+          </a>
+        </h3>
+        <h4>Copyright &copy; 2022. All rights reserved.</h4>
+        <h4>
+          Created with React by{" "}
+          <a href="https://www.linkedin.com/in/ifeanyi-onyeka/">Ifeanyi</a>
+        </h4>
+      </footer>
     </main>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import Github from "./images/Github.png";
 
-export default function Projects({name, description1, description2, stack1, stack2, stack3, image, source}) {
+export default function Projects({name, description1, description2, stack1, stack2, stack3, image, source, demo}) {
   return (
-    <section className="my-projects">
+    <section className="my-projects" id="my-projects">
       <div className="my-project-details">
         <figure className="project-pictures">
           <img src={image} alt="Project Pictures" />
@@ -21,6 +21,9 @@ export default function Projects({name, description1, description2, stack1, stac
             <img src={Github} alt="Github Logo" />
             <a href={source} target="_blank" rel="noreferrer">
               Source Code
+            </a>
+            <a href={demo} target="_blank" rel="noreferrer">
+              Live Demo
             </a>
           </h4>
         </aside>

@@ -13,8 +13,9 @@ const info = [
     image: weatherApp,
     stack1: "ReactJS",
     stack2: "Figma Design",
-    stack3: "Tommorrow.ai weather API",
+    stack3: "Tommorrow.io REST API",
     source: "https://github.com/I-am-ifeanyi/Weather-App.git",
+    demo: "togtechweatherapp.netlify.com"
   },
   {
     id: 2,
@@ -25,8 +26,9 @@ const info = [
     image: portfolio,
     stack1: "ReactJS",
     stack2: "Figma Design",
-    stack3: "API",
+    stack3: " REST API",
     source: "https://github.com/I-am-ifeanyi/Portfolio-website.git",
+    demo: "togtech.netlify.com",
   },
   {
     id: 3,
@@ -38,6 +40,8 @@ const info = [
     stack2: "CSS",
     stack3: false,
     source: "https://github.com/I-am-ifeanyi/Uslacc-Africa.org.git",
+    demo: "uslaccafrica.org"
+  
   },
 ];
 
