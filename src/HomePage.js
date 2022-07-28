@@ -11,6 +11,8 @@ import code from "./images/Code.png";
 import info from "./API"
 import Projects from "./projects";
 import resume from "./images/ifeanyi-resume.pdf";
+import hamburger from "./images/hamburger.jpg";
+import closeMenu from "./images/menu-close.png";
 
 export default function HomePage() {
 const style = {
@@ -23,6 +25,13 @@ const videoStyle = {
   height: '300px'
 
 }
+
+const [lightMode, setLightMode] = React.useState(true);
+const [navBar, setNavBar] = React.useState(false);
+
+const showNav = () => setNavBar((prev) => !prev);
+
+const toggle = () => setLightMode((prev) => !prev); 
 
 const apiInfo = info.map((data) => {
   return (
@@ -37,6 +46,7 @@ const apiInfo = info.map((data) => {
       image={data.image}
       source={data.source}
       demo={data.demo}
+      lightMode={lightMode}
       
     />
     
@@ -44,9 +54,7 @@ const apiInfo = info.map((data) => {
   
 })
 
-const [lightMode, setLightMode] = React.useState(true)
 
-const toggle = () => setLightMode((prev) => !prev) 
 
 
 const toggleLight = {
@@ -99,28 +107,42 @@ const changeDark = {
 };
 
 
+
+
   return (
     <main className="main-body" style={lightMode ? changeLight : changeDark}>
       <header>
         <div onClick={toggle} style={lightMode ? toggleLight : toggleDark}>
           <div style={lightMode ? toggleLeft : toggleRight}></div>
         </div>
+        <img
+          src={navBar ? closeMenu : hamburger}
+          alt=""
+          className="hamburger"
+          onClick={showNav}
+        />
       </header>
-      <nav className={lightMode ? "navBar" : "navBar2"}>
+
+      <nav className={navBar ? "navBar" : "navBar2"}>
         <img src="cover.png" alt="TOG Official Logo" className="tog-logo" />
         <ul className="navigators">
           <li>
             <a href={<HomePage />}>Home</a>
           </li>
           <li>
-            <a href="#brief-bio">About</a>
+            <a href="#brief-bio" onClick={showNav}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#my-projects">Work</a>
+            <a href="#my-projects" onClick={showNav}>
+              Work
+            </a>
           </li>
           <li>Contact Me</li>
         </ul>
       </nav>
+
       <section className="introduction">
         <div className="biography-section">
           <div className="brief-bio" id="brief-bio">
@@ -196,7 +218,7 @@ const changeDark = {
           </div>
         </div>
       </section>
-      <div className="social-handles">
+      <div className={lightMode ? "social-handles" : "social-handles2"}>
         <figure>
           <a
             href="mailto: theonyekagroup@gmail.com"
@@ -250,8 +272,8 @@ const changeDark = {
       </div>
       <section className="my-services">
         <div className="services-option">
-          <div className="primary-service">
-            <div className="service-details">
+          <div className={lightMode ? "primary-service" : "primary-service2"}>
+            <div className={lightMode ? "service-details" : "service-details2"}>
               <img src={webIcon} alt="" style={style} />
               <div className="details">
                 <h1>Web Development</h1>
@@ -266,8 +288,8 @@ const changeDark = {
               </div>
             </div>
           </div>
-          <div className="primary-service">
-            <div className="service-details">
+          <div className={lightMode ? "primary-service" : "primary-service2"}>
+            <div className={lightMode ? "service-details" : "service-details2"}>
               <img src={code} alt="" style={style} />
               <div className="details">
                 <h1>App Development</h1>
@@ -289,7 +311,7 @@ const changeDark = {
             src="https://www.youtube.com/embed/1KJfVGpNRnM"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             title="video"
             style={videoStyle}
           />
@@ -299,16 +321,16 @@ const changeDark = {
       <h1 className="caseStudies">Sample Projects</h1>
       {apiInfo}
       <footer className={lightMode ? "foot" : "footy"}>
-        <h3>
-          Find an issue with this page?{" "}
+        <h5>
+          Find an issue with this page? &nbsp;
           <a href="https://github.com/I-am-ifeanyi/Portfolio-website.git">
             feel free to fix it on Github
           </a>
-        </h3>
-        <h4>Copyright &copy; 2022. All rights reserved.</h4>
+        </h5>
+        <h5>Copyright &copy; 2022. All rights reserved.</h5>
         <h4>
-          Created with React by{" "}
-          <a href="https://www.linkedin.com/in/ifeanyi-onyeka/">Ifeanyi</a>
+          Created with React by
+          <a href="https://www.linkedin.com/in/ifeanyi-onyeka/"> Ifeanyi</a>
         </h4>
       </footer>
     </main>

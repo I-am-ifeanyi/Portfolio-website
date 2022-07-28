@@ -46,6 +46,15 @@ header {
   box-shadow: 0.5px 5px 10px gray;
 }
 
+.hamburger {
+  width: 70px;
+  background-color: aqua;
+  padding: 5px;
+  float: right;
+  border-radius: 5px;
+  display: none;
+}
+
 .tog-logo {
   width: 100px;
   height: 50px;
@@ -115,7 +124,7 @@ li:last-child:hover {
 }
 
 .brief-bio {
-  max-width: 550px;
+  max-width: 450px;
 }
 
 .brief-bio > h1 {
@@ -198,8 +207,9 @@ li:last-child:hover {
   border-radius: 50%;
   background: #F6F8FA;
   border: 2px solid #F9FBFC;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .my-picture {
@@ -218,7 +228,21 @@ li:last-child:hover {
   border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.social-handles2 {
+  position: relative;
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  top: 150px;
+  background:  rgb(37, 18, 50);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
 .social-handles > figure {
@@ -226,7 +250,6 @@ li:last-child:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 15px;
 }
 
 .social-handles > figure:hover {
@@ -250,7 +273,7 @@ li:last-child:hover {
   position: relative;
   width: 45%;
   height: auto;
-  background: #EDF5FC;
+  background: #d0d6dc;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -269,10 +292,32 @@ li:last-child:hover {
   align-items: center;
 }
 
+.primary-service2 {
+  width: 100%;
+  max-height: 300px;
+  background: #2a2b2f;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
 .service-details {
   width: 100%;
   height: 280px;
   background: #D9D9D9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 10px 20px 10px 10px;
+}
+
+.service-details2 {
+  width: 100%;
+  height: 280px;
+  background: rgb(119, 114, 114);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -319,6 +364,443 @@ li:last-child:hover {
   top: 400px;
   width: 100%;
   margin-bottom: 100px;
+}
+
+.my-project-details {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  z-index: 1;
+}
+
+.setAside {
+  max-width: 45%;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+  box-shadow: 1px 5px 20px gray;
+  line-height: 1.1;
+  border-radius: 5px;
+  margin-left: -200px;
+  margin-bottom: -200px;
+  z-index: 100;
+}
+
+.setAside2 {
+  max-width: 45%;
+  background-color: rgb(119, 114, 114);
+  padding: 10px 20px;
+  box-shadow: 1px 5px 20px gray;
+  line-height: 1.1;
+  border-radius: 5px;
+  margin-left: -200px;
+  margin-bottom: -200px;
+  z-index: 100;
+}
+
+.project-pictures {
+  max-width: 80%;
+  height: 450px;
+  padding: 20px;
+  background: #EDF5FC;
+  position: relative;
+  opacity: 0.5;
+  z-index: 100;
+  border-radius: 0px 12px 0px 12px;
+  animation-name: dancebg;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: 2s all linear;
+  border: 0.3px dotted navy;
+  
+}
+
+@keyframes dancebg {
+  0% {
+    background-color:  #909fae;
+    
+  }
+  35% {
+    background-color:  rgb(179, 179, 236);
+  }
+  70% {
+    background-color:  rgb(219, 216, 198);
+  }
+  100% {
+    background-color:  rgb(238, 226, 226);
+  }
+  
+}
+
+
+.project-pictures > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 12px  0px 12px;
+  position: relative;
+  z-index: 1;
+  
+  
+}
+
+.stacks > h4 {
+  display: flex;
+  background-color:  rgb(16, 16, 66);
+  color: white;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: -10px;
+}
+
+.stacks > h4:hover {
+  background-color:  rgb(21, 21, 96);
+  cursor: pointer;
+}
+
+.setAside > h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1.5px;
+}
+
+.foot {
+  width: 100%;
+  height: 150px;
+  background-color: #FFFFFF;
+  position: relative;
+  margin-top: 50%;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1px;
+  color: rgb(16, 16, 66);
+}
+
+.footy {
+  width: 100%;
+  height: 150px;
+  background-color: darkgray;
+  position: relative;
+  margin-top: 50%;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1px;
+  color: rgb(16, 16, 66);
+}
+
+@media (max-width: 1100px) {
+.navBar {
+  position: sticky;
+  position: -webkit-sticky;
+  max-width: 80%;
+  height: 80px;
+  top: 0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  z-index: 100;
+  box-shadow: 0.5px 5px 10px gray;
+}
+
+.navBar2 {
+  position: sticky;
+  position: -webkit-sticky;
+  max-width: 80%;
+  height: 80px;
+  top: 0;
+  background: darkgrey;
+  border-radius: 12px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  z-index: 100;
+  box-shadow: 0.5px 5px 10px gray;
+}
+
+.tog-logo {
+  width: 100px;
+  height: 50px;
+  box-shadow: 2px 2.5px 3px gray;
+  animation-name: logo;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navigators {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.navigators > li > a {
+  font-weight: 800;
+  text-decoration: none;
+  color: rgb(9, 9, 84);
+}
+
+.navigators > li:hover  {
+  color: navy;
+  border-bottom: 2px solid navy;
+}
+
+.navigators > li > a:active {
+  color: red;
+}
+
+li:last-child {
+  background-color: rgb(6, 6, 59);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+li:last-child:hover {
+  background-color: rgb(89, 89, 150);
+  color: white;
+}
+
+.biography-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 100px;
+}
+
+.brief-bio {
+  max-width: 350px;
+}
+
+.brief-bio > h1 {
+  font-size: 38px;
+  letter-spacing: 5.5px;
+  line-height: 1.5px;
+  font-weight: 800;
+}
+
+.my-stack {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+}
+
+.my-stack > div {
+  width: 80px;
+  height: 3px;
+  background-color: rgb(6, 6, 59);
+}
+
+.my-stack > h3 {
+  letter-spacing: 1.5px;
+}
+
+.stack-images {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 50px;;
+}
+
+.stack-images > img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-me-download-resume {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-me-download-resume > h4 > a{
+  background-color: rgb(6, 6, 59);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-me-download-resume > h4 > a > img {
+  width: 20px;
+  height: 20px;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(80%) contrast(119%);
+
+}
+
+.contact-me-download-resume > h4:hover{
+  background-color: rgb(51, 51, 110);
+}
+
+.introduction {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+
+}
+
+.display-picture {
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #F6F8FA;
+  border: 2px solid #F9FBFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-picture {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+}
+
+.social-handles {
+  position: relative;
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  top: 150px;
+  background:  #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-handles > figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: -20px;
+}
+
+.social-handles > figure:hover {
+  transform: translateY(1.5px);
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.my-services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  top: 250px;
+  margin: auto;
+  gap: 50px;
+}
+
+.services-option {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #EDF5FC;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 15px;
+}
+
+.primary-service {
+  width: 100%;
+  max-height: 300px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.service-details {
+  width: 100%;
+  height: 280px;
+  background: #D9D9D9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 10px 20px 10px 10px;
+}
+
+.service-details:hover {
+   box-shadow: 0.5px 5px 15px gray;
+   transition: 0.5s all linear;
+}
+
+
+.details > h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.details > p{
+  text-align: justify;
+}
+
+.caseStudies {
+  position: relative;
+  width: 70%;
+  margin: 50px auto;
+  padding: 5px;
+  top: 300px;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  color: #243762;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-bottom: 3px solid;
+  text-align: center;
+
+}
+
+.my-projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 400px;
+  width: 100%;
+  margin-bottom: 200px;
 }
 
 .my-project-details {
@@ -391,10 +873,11 @@ li:last-child:hover {
   display: flex;
   background-color:  rgb(16, 16, 66);
   color: white;
-  width: 50%;
-  padding: 10px;
+  width: 90%;
+  padding: 5px;
   border-radius: 5px;
   margin-bottom: -10px;
+  font-size: 14px;
 }
 
 .stacks > h4:hover {
@@ -407,6 +890,7 @@ aside > h4 {
   align-items: center;
   gap: 10px;
   letter-spacing: 1.5px;
+  font-size: 14px;
 }
 
 .foot {
@@ -434,4 +918,476 @@ aside > h4 {
   line-height: 1px;
   color: rgb(16, 16, 66);
 }
+}
+
+@media (max-width: 750px) {
+.navBar {
+  position: fixed;
+  max-width: 50%;
+  height: 100vh;
+  top: 0;
+  background: #FFFFFF;
+  border-radius: 0px 12px 12px 0px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  z-index: 100;
+  box-shadow: 0.5px 5px 10px gray;
+  transition: all 5s ease-in-out;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: fixed;
+  height: 50px;
+  z-index: 200;
+  margin: 20px;
+}
+
+.hamburger {
+  display: block;
+  width: 70px;
+  background-color: rgb(255, 252, 252);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+
+
+
+.navBar2 {
+  position: fixed;
+  max-width: 50%;
+  height: 100vh;
+  top: 0;
+  background: darkgrey;
+  border-radius: 0px 12px 12px 0px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  z-index: 100;
+  box-shadow: 0.5px 5px 10px gray;
+}
+
+.tog-logo {
+  width: 70px;
+  height: 50px;
+  box-shadow: 2px 2.5px 3px gray;
+  animation-name: logo;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  display: none;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navigators {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  cursor: pointer;
+  margin-top: 150px;
+}
+
+.navigators > li > a {
+  font-weight: 800;
+  text-decoration: none;
+  color: rgb(9, 9, 84);
+}
+
+.navigators > li:hover  {
+  color: navy;
+  border-bottom: 2px solid navy;
+}
+
+.navigators > li > a:active {
+  color: red;
+}
+
+li:last-child {
+  background-color: rgb(6, 6, 59);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-left: -35px;
+}
+
+li:last-child:hover {
+  background-color: rgb(89, 89, 150);
+  color: white;
+}
+
+.introduction {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.biography-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+
+.brief-bio {
+  width: 100%;
+}
+
+.brief-bio > p {
+  text-align: justify;
+}
+
+.brief-bio > h1 {
+  font-size: 30px;
+  letter-spacing: 5.5px;
+  line-height: 1.5px;
+  font-weight: 800;
+}
+
+.my-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+}
+
+.my-stack > div {
+  width: 80px;
+  height: 3px;
+  background-color: rgb(6, 6, 59);
+}
+
+.my-stack > h3 {
+  letter-spacing: 1.5px;
+}
+
+.stack-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;;
+}
+
+.stack-images > img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-me-download-resume {
+  display: flex;
+  position: relative;
+  top: -30px;
+  gap: 30px;
+}
+
+.contact-me-download-resume > h4 > a{
+  background-color: rgb(6, 6, 59);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.contact-me-download-resume > h4 > a > img {
+  width: 20px;
+  height: 20px;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(80%) contrast(119%);
+
+}
+
+.contact-me-download-resume > h4:hover{
+  background-color: rgb(51, 51, 110);
+}
+
+.display-picture {
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #F6F8FA;
+  border: 2px solid #F9FBFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-picture {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+}
+
+.social-handles {
+  position: relative;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+  top: 150px;
+  background:  #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.social-handles > figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: -20px;
+  background: #e2e6ee;
+  width: 100%;
+  padding: 3px;
+  border-radius: 5px;;
+}
+
+.social-handles > figure:hover {
+  transform: translateY(1.5px);
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.my-services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  top: 250px;
+  margin: auto;
+  gap: 50px;
+}
+
+.services-option {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #EDF5FC;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.primary-service {
+  width: 100%;
+  max-height: 400px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.service-details {
+  width: 100%;
+  max-height: 500px;
+  background: #D9D9D9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 10px 20px 10px 10px;
+}
+
+.service-details:hover {
+   box-shadow: 0.5px 5px 15px gray;
+   transition: 0.5s all linear;
+}
+
+
+.details > h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: -5px;
+}
+
+.details > p{
+  text-align: justify;
+}
+
+.caseStudies {
+  position: relative;
+  width: 60%;
+  margin: -80px auto;
+  padding: 5px;
+  top: 400px;
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  color: #243762;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-bottom: 3px solid;
+
+}
+
+.my-projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 400px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.my-project-details {
+  position: relative;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.my-project-details > aside {
+  position: relative;
+  top: 150px;
+  max-width: 60%;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+  box-shadow: 1px 5px 20px gray;
+  line-height: 1.1;
+  border-radius: 5px;
+  margin-left: -260px;
+  margin-right: 10px;
+  margin-bottom: -200px;
+  z-index: 200;
+}
+
+.project-pictures {
+  max-width: 90%;
+  height: 400px;
+  padding: 20px;
+  background: #EDF5FC;
+  position: relative;
+  opacity: 0.5;
+  z-index: 100;
+  border-radius: 0px 12px 0px 12px;
+  animation-name: dancebg;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transition: 2s all linear;
+  border: 0.3px dotted navy;
+  
+}
+
+@keyframes dancebg {
+  0% {
+    background-color:  #909fae;
+    
+  }
+  35% {
+    background-color:  rgb(179, 179, 236);
+  }
+  70% {
+    background-color:  rgb(219, 216, 198);
+  }
+  100% {
+    background-color:  rgb(238, 226, 226);
+  }
+  
+}
+
+
+.project-pictures > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 12px  0px 12px;
+  position: relative;
+  z-index: 1;
+  
+  
+}
+
+.stacks > h4 {
+  display: flex;
+  background-color:  rgb(16, 16, 66);
+  color: white;
+  width: 90%;
+  padding: 3px;
+  border-radius: 2px;
+  font-size: 14px;
+  margin-bottom: -10px;
+}
+
+.stacks > h4:hover {
+  background-color:  rgb(21, 21, 96);
+  cursor: pointer;
+}
+
+aside > h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+.foot {
+  width: 100%;
+  height: 150px;
+  background-color: #FFFFFF;
+  position: relative;
+  padding: 10px;
+  top: 450px;
+  display: grid;
+  place-items: center;
+  line-height: 1px;
+  color: rgb(16, 16, 66);
+}
+
+.footy {
+  width: 100%;
+  height: 150px;
+  background-color: darkgray;
+  position: relative;
+  margin-top: 50%;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  line-height: 1px;
+  color: rgb(16, 16, 66);
+}
+}
+
+
 

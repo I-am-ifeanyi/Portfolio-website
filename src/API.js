@@ -15,7 +15,7 @@ const info = [
     stack2: "Figma Design",
     stack3: "Tommorrow.io REST API",
     source: "https://github.com/I-am-ifeanyi/Weather-App.git",
-    demo: "togtechweatherapp.netlify.com"
+    demo: "togtechweatherapp.netlify.com",
   },
   {
     id: 2,
@@ -38,10 +38,9 @@ const info = [
     image: uslaccAfrica,
     stack1: "HTML",
     stack2: "CSS",
-    stack3: false,
+    stack3: "Figma Design",
     source: "https://github.com/I-am-ifeanyi/Uslacc-Africa.org.git",
-    demo: "uslaccafrica.org"
-  
+    demo: "uslaccafrica.org",
   },
 ];
 
