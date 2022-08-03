@@ -1,5 +1,8 @@
 import React from "react";
 import Github from "./images/Github.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 export default function Projects({name, description1, description2, stack1, stack2, stack3, image, source, demo, lightMode}) {
 
@@ -9,7 +12,13 @@ export default function Projects({name, description1, description2, stack1, stac
         <figure className="project-pictures">
           <img src={image} alt="Project Pictures" />
         </figure>
-        <aside className={lightMode ? "setAside" : "setAside2"}>
+        <aside
+          className={lightMode ? "setAside" : "setAside2"}
+          data-aos="fade-up-left"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <h1>{name}</h1>
           <p>{description1}</p>
           <p>{description2}</p>

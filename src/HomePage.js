@@ -13,8 +13,32 @@ import Projects from "./projects";
 import resume from "./images/ifeanyi-resume.pdf";
 import hamburger from "./images/hamburger.jpg";
 import closeMenu from "./images/menu-close.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 export default function HomePage() {
+
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: "aos-init", // class applied after initialization
+    animatedClassName: "aos-animate", // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: "ease", // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+  });
 const style = {
   width: "50px",
   height: "50px"
@@ -149,7 +173,14 @@ const changeDark = {
 
       <section className="introduction">
         <div className="biography-section">
-          <div className="brief-bio" id="brief-bio">
+          <div
+            className="brief-bio"
+            id="brief-bio"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <h4>Hello there, I am</h4>
             <h1>IFEANYI</h1>
             <p>
@@ -193,7 +224,7 @@ const changeDark = {
               />
 
               <img
-                src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvNlIpuOHHIQyGK5ken1X3hO4kDoUe0n2SCmqpmf9I0ThNz1aaSafx_Fc9zPCntXs6bZU&usqp=CAU"
                 alt=""
               />
 
@@ -211,7 +242,13 @@ const changeDark = {
               </h4>
             </div>
           </div>
-          <div className="display-picture">
+          <div
+            className="display-picture"
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <figure>
               <img
                 src={displayPicture}
@@ -223,7 +260,13 @@ const changeDark = {
         </div>
       </section>
       <div id="my-contacts"></div>
-      <div className={lightMode ? "social-handles" : "social-handles2"}>
+      <div
+        className={lightMode ? "social-handles" : "social-handles2"}
+        data-aos="flip-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <figure>
           <a
             href="mailto: theonyekagroup@gmail.com"
@@ -280,7 +323,13 @@ const changeDark = {
           <div className={lightMode ? "primary-service" : "primary-service2"}>
             <div className={lightMode ? "service-details" : "service-details2"}>
               <img src={webIcon} alt="" style={style} />
-              <div className="details">
+              <div
+                className="details"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+              >
                 <h1>Web Development</h1>
                 <p>
                   I care deeply about creating world-class, useful, and
@@ -296,7 +345,13 @@ const changeDark = {
           <div className={lightMode ? "primary-service" : "primary-service2"}>
             <div className={lightMode ? "service-details" : "service-details2"}>
               <img src={code} alt="" style={style} />
-              <div className="details">
+              <div
+                className="details"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+              >
                 <h1>App Development</h1>
                 <p>
                   I have an assemble of experienced mobile app developers who
@@ -310,7 +365,12 @@ const changeDark = {
             </div>
           </div>
         </div>
-        <div className="services-option">
+        <div
+          className="services-option"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           <h1>Introduction</h1>
           <iframe
             src="https://www.youtube.com/embed/1KJfVGpNRnM"
@@ -323,7 +383,13 @@ const changeDark = {
         </div>
       </section>
 
-      <h1 className="caseStudies">Sample Projects</h1>
+      <h1
+        className="caseStudies"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
+        Sample Projects
+      </h1>
       {apiInfo}
       <footer className={lightMode ? "foot" : "footy"}>
         <h5>
