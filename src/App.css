@@ -1028,7 +1028,7 @@ header {
   color: red;
 }
 
-li:last-child {
+li:last-child a{
   background-color: rgb(6, 6, 59);
   color: white;
   padding: 10px 20px;
