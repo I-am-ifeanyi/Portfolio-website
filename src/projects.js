@@ -19,7 +19,7 @@ export default function Projects({name, description1, description2, stack1, stac
             <h4>{stack3}</h4>
           </div>
           <h4>
-            <img src={Github} alt="Github Logo" />a
+            <img src={Github} alt="Github Logo" />
             <a href={source} target="_blank" rel="noreferrer">
               Source Code
             </a>
