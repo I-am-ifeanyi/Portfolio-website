@@ -139,7 +139,11 @@ const changeDark = {
               Work
             </a>
           </li>
-          <li>Contact Me</li>
+          <li>
+            <a href="#my-contacts" onClick={showNav}>
+              Contact me
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -218,6 +222,7 @@ const changeDark = {
           </div>
         </div>
       </section>
+      <div id="my-contacts"></div>
       <div className={lightMode ? "social-handles" : "social-handles2"}>
         <figure>
           <a
