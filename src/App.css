@@ -1165,12 +1165,36 @@ li:last-child:hover {
   justify-content: space-around;
 }
 
+.social-handles2 {
+  position: relative;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+  top: 150px;
+  background:  whitesmoke;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .social-handles > figure {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin: -20px;
   background: #e2e6ee;
+  width: 100%;
+  padding: 3px;
+  border-radius: 5px;;
+}
+
+.social-handles2 > figure {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: -20px;
+  background: #3f3a3a;
   width: 100%;
   padding: 3px;
   border-radius: 5px;;
@@ -1278,7 +1302,7 @@ li:last-child:hover {
   z-index: 1;
 }
 
-.my-project-details > aside {
+.my-project-details > .setAside {
   position: relative;
   top: 150px;
   max-width: 60%;
@@ -1292,6 +1316,22 @@ li:last-child:hover {
   margin-bottom: -200px;
   z-index: 200;
 }
+
+.my-project-details > .setAside2 {
+  position: relative;
+  top: 150px;
+  max-width: 60%;
+  background-color: #554f4f;
+  padding: 10px 20px;
+  box-shadow: 1px 5px 20px gray;
+  line-height: 1.1;
+  border-radius: 5px;
+  margin-left: -260px;
+  margin-right: 10px;
+  margin-bottom: -200px;
+  z-index: 200;
+}
+
 
 .project-pictures {
   max-width: 90%;
@@ -1380,7 +1420,7 @@ aside > h4 {
   height: 150px;
   background-color: darkgray;
   position: relative;
-  margin-top: 50%;
+  top: 450px;
   bottom: 0;
   display: grid;
   place-items: center;
