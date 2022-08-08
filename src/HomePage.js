@@ -1,18 +1,23 @@
 import React from "react";
-import displayPicture from "./images/dp.jpg" 
-import downloadIcon from "./images/download-svgrepo-com.svg"; 
-import Email from "./images/Email.png"; 
-import Github from "./images/Github.png";
-import LinkedIn from "./images/LinkedIn.png";
-import Twitter from "./images/Twitter.png";
-import WhatsApp from "./images/WhatsApp.png";
-import webIcon from "./images/web-icon.jpg";
-import code from "./images/Code.png";
+import displayPicture from "./images/dp.webp" 
+import downloadIcon from "./images/download-svgrepo-com.webp"; 
+import Email from "./images/Email.webp"; 
+import Github from "./images/Github.webp";
+import LinkedIn from "./images/LinkedIn.webp";
+import Twitter from "./images/Twitter.webp";
+import WhatsApp from "./images/WhatsApp.webp";
+import webIcon from "./images/web-icon.webp";
+import code from "./images/Code.webp";
 import info from "./API"
 import Projects from "./projects";
 import resume from "./images/ifeanyi-resume.pdf";
-import hamburger from "./images/hamburger.jpg";
-import closeMenu from "./images/menu-close.png";
+import hamburger from "./images/hamburger.webp";
+import javascript from "./images/javascript.webp";
+import react from "./images/react.webp";
+import typescript from "./images/typescript.webp";
+import css from "./images/css.webp";
+import php from "./images/php.webp";
+import closeMenu from "./images/menu-close.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -206,7 +211,7 @@ const changeDark = {
             </div>
             <div className="stack-images">
               <img
-                src="https://www.svgrepo.com/show/303500/react-1-logo.svg"
+                src={react}
                 alt=""
               />
               <img
@@ -214,23 +219,22 @@ const changeDark = {
                 alt=""
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png"
+                src={php}
                 alt=""
               />
 
               <img
-                src="https://www.kindpng.com/picc/m/464-4640184_css3-png-download-css-icon-transparent-png.png"
+                src={css}
                 alt=""
               />
 
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvNlIpuOHHIQyGK5ken1X3hO4kDoUe0n2SCmqpmf9I0ThNz1aaSafx_Fc9zPCntXs6bZU&usqp=CAU"
+                src={javascript}
                 alt=""
               />
 
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png
-"
+                src={typescript}
                 alt=""
               />
             </div>

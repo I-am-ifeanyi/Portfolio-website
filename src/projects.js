@@ -1,5 +1,5 @@
 import React from "react";
-import Github from "./images/Github.png";
+import Github from "./images/Github.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();

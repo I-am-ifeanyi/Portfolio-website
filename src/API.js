@@ -1,10 +1,26 @@
-import weatherApp from "./images/weather-app.png";
-import portfolio from "./images/portfolio-website.png";
-import uslaccAfrica from "./images/uslaccafrica-website.png";
+import weatherApp from "./images/weather-app.webp";
+import portfolio from "./images/portfolio-website.webp";
+import uslaccAfrica from "./images/uslaccafrica-website.webp";
+import bubblegum from "./images/bubblegum.webp";
+
 
 const info = [
   {
     id: 0,
+    name: "Trybe",
+    description1:
+      "Ongoing combined project designed to serve as a hiring platform for remote jobs around the world.",
+    description2:
+      "The project still in the early stages, not responsive as of yet. Quite excited about this project.",
+    image: bubblegum,
+    stack1: "Vue",
+    stack2: "javaScript",
+    stack3: "Figma Design",
+    source: "https://github.com/iyiolaosuagwu/fl-blog",
+    demo: "https://brilliant-bubblegum-124bb9.netlify.app/",
+  },
+  {
+    id: 1,
     name: "Weather App",
     description1:
       "This is a personal project I did to specifically perfect my consumption of APIs and I am proud of what I was able to achieve working on this project.",
@@ -43,6 +59,7 @@ const info = [
     demo: "uslaccafrica.org",
   },
 ];
+
 
 export default info
 
