@@ -138,9 +138,15 @@ const changeDark = {
         </div>
         <div onClick={showNav} className="hamburger">
           {navBar ? (
-            <RiCloseFill color="rgb(6, 6, 59)" fontSize="2em" />
+            <RiCloseFill
+              fontSize="2em"
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+            />
           ) : (
-            <GiHamburgerMenu color="rgb(6, 6, 59)" fontSize="2em" />
+            <GiHamburgerMenu
+              fontSize="2em"
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+            />
           )}
         </div>
       </header>
