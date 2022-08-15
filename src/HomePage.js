@@ -140,7 +140,7 @@ const changeDark = {
           {navBar ? (
             <RiCloseFill
               fontSize="2em"
-              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              color="rgb(6, 6, 59)"
             />
           ) : (
             <GiHamburgerMenu
