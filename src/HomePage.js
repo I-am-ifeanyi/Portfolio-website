@@ -1,25 +1,22 @@
 import React from "react";
 import displayPicture from "./images/dp.webp" 
-import downloadIcon from "./images/download-svgrepo-com.webp"; 
-import Email from "./images/Email.webp"; 
-import Github from "./images/Github.webp";
-import LinkedIn from "./images/LinkedIn.webp";
-import Twitter from "./images/Twitter.webp";
-import WhatsApp from "./images/WhatsApp.webp";
-import webIcon from "./images/web-icon.webp";
-import code from "./images/Code.webp";
 import info from "./API"
 import Projects from "./projects";
 import resume from "./images/ifeanyi-resume.pdf";
-import hamburger from "./images/hamburger.webp";
-import javascript from "./images/javascript.webp";
-import react from "./images/react.webp";
-import typescript from "./images/typescript.webp";
-import css from "./images/css.webp";
-import php from "./images/php.webp";
-import closeMenu from "./images/menu-close.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { DiCss3, DiHtml5, DiJsBadge, DiReact } from "react-icons/di";
+import { RiComputerLine, RiCodeSSlashFill, RiCloseFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GrProjects } from "react-icons/gr";
+import {
+  FaDownload,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+  FaEnvelope,
+} from "react-icons/fa";
 AOS.init();
 
 export default function HomePage() {
@@ -44,11 +41,6 @@ export default function HomePage() {
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
-const style = {
-  width: "50px",
-  height: "50px"
-}
-
 const videoStyle = {
   width: '100%',
   height: '300px'
@@ -93,7 +85,7 @@ const toggleLight = {
   backgroundColor: "rgb(7, 7, 53)",
   margin: "10px",
   position: "fixed",
-  right: "0"
+  right: "50px"
 }
 
 const toggleDark = {
@@ -103,7 +95,7 @@ const toggleDark = {
   backgroundColor: "white",
   margin: "10px",
   position: "fixed",
-  right: "0",
+  right: "50px",
 };
 
 const toggleLeft = {
@@ -144,12 +136,13 @@ const changeDark = {
         <div onClick={toggle} style={lightMode ? toggleLight : toggleDark}>
           <div style={lightMode ? toggleLeft : toggleRight}></div>
         </div>
-        <img
-          src={navBar ? closeMenu : hamburger}
-          alt=""
-          className="hamburger"
-          onClick={showNav}
-        />
+        <div onClick={showNav} className="hamburger">
+          {navBar ? (
+            <RiCloseFill color="rgb(6, 6, 59)" fontSize="2em" />
+          ) : (
+            <GiHamburgerMenu color="rgb(6, 6, 59)" fontSize="2em" />
+          )}
+        </div>
       </header>
 
       <nav className={navBar ? "navBar" : "navBar2"}>
@@ -170,7 +163,7 @@ const changeDark = {
           </li>
           <li>
             <a href="#my-contacts" onClick={showNav}>
-              Contact me
+              Contact
             </a>
           </li>
         </ul>
@@ -200,7 +193,7 @@ const changeDark = {
               to maximize productivity.
             </p>
             <p>
-              I look forward to continuos learning while implementing new
+              I look forward to continuous learning while implementing new
               technologies and simultaneously boosting my relevance in any given
               work space.
             </p>
@@ -210,38 +203,28 @@ const changeDark = {
               <div></div>
             </div>
             <div className="stack-images">
-              <img
-                src={react}
-                alt=""
+              <DiHtml5
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="3em"
               />
-              <img
-                src="https://w7.pngwing.com/pngs/286/519/png-transparent-microsoft-azure-sql-database-microsoft-sql-server-azure-sql-data-warehouse-logo-text-logo-microsoft-azure.png"
-                alt=""
+              <DiCss3
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="3em"
               />
-              <img
-                src={php}
-                alt=""
-              />
-
-              <img
-                src={css}
-                alt=""
+              <DiJsBadge
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="2.5em"
               />
 
-              <img
-                src={javascript}
-                alt=""
-              />
-
-              <img
-                src={typescript}
-                alt=""
+              <DiReact
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="3.5em"
               />
             </div>
             <div className="contact-me-download-resume">
               <h4>
                 <a href={resume} download={resume}>
-                  Download Resume <img src={downloadIcon} alt="" />
+                  Download Resume <FaDownload color="white" />
                 </a>
               </h4>
             </div>
@@ -277,7 +260,10 @@ const changeDark = {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Email} alt="Email Logo" />
+            <FaEnvelope
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
           </a>
           <figcaption>Email</figcaption>
         </figure>
@@ -287,7 +273,10 @@ const changeDark = {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Github} alt="Github Logo" />
+            <FaGithub
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
           </a>
           <figcaption>Github</figcaption>
         </figure>
@@ -297,7 +286,10 @@ const changeDark = {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={LinkedIn} alt="LinkedIn Logo" />
+            <FaLinkedin
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
           </a>
           <figcaption>LinkedIn</figcaption>
         </figure>
@@ -307,7 +299,10 @@ const changeDark = {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Twitter} alt="Twitter Logo" />
+            <FaTwitter
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
           </a>
           <figcaption>Twitter</figcaption>
         </figure>
@@ -317,7 +312,10 @@ const changeDark = {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={WhatsApp} alt="WhatsApp Logo" />
+            <FaWhatsapp
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
           </a>
           <figcaption>whatsapp</figcaption>
         </figure>
@@ -326,7 +324,10 @@ const changeDark = {
         <div className="services-option">
           <div className={lightMode ? "primary-service" : "primary-service2"}>
             <div className={lightMode ? "service-details" : "service-details2"}>
-              <img src={webIcon} alt="" style={style} />
+              <RiComputerLine
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="20em"
+              />
               <div
                 className="details"
                 data-aos="zoom-in"
@@ -348,7 +349,10 @@ const changeDark = {
           </div>
           <div className={lightMode ? "primary-service" : "primary-service2"}>
             <div className={lightMode ? "service-details" : "service-details2"}>
-              <img src={code} alt="" style={style} />
+              <RiCodeSSlashFill
+                color={lightMode ? "rgb(6, 6, 59)" : "white"}
+                fontSize="20em"
+              />
               <div
                 className="details"
                 data-aos="zoom-in"
@@ -392,7 +396,8 @@ const changeDark = {
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       >
-        Sample Projects
+        Sample Projects{" "}
+        <GrProjects color={lightMode ? "#243762" : "white"} fontSize="0.7em" />
       </h1>
       {apiInfo}
       <footer className={lightMode ? "foot" : "footy"}>

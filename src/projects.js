@@ -1,7 +1,9 @@
 import React from "react";
-import Github from "./images/Github.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {
+  FaGithub,
+} from "react-icons/fa";
 AOS.init();
 
 export default function Projects({name, description1, description2, stack1, stack2, stack3, image, source, demo, lightMode}) {
@@ -28,7 +30,10 @@ export default function Projects({name, description1, description2, stack1, stac
             <h4>{stack3}</h4>
           </div>
           <h4>
-            <img src={Github} alt="Github Logo" />
+            <FaGithub
+              color={lightMode ? "rgb(6, 6, 59)" : "white"}
+              fontSize="1.5em"
+            />
             <a href={source} target="_blank" rel="noreferrer">
               Source Code
             </a>
